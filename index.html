@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Christopher, Backend and Systems developer</title>
+<title>Christopher: Backend and Systems developer</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050505' rx='6'/%3E%3Cline x1='6' y1='16' x2='20' y2='16' stroke='%23818cf8' stroke-width='2' stroke-linecap='round'/%3E%3Ccircle cx='23' cy='16' r='3' fill='%23818cf8'/%3E%3Ccircle cx='23' cy='16' r='6' fill='%23818cf8' opacity='0.2'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./tailwind.css">
@@ -119,6 +120,99 @@
     </div>
   </section>
 
+  <section id="projects" class="py-24 px-6">
+    <div class="max-w-2xl mx-auto mb-12 reveal">
+      <p class="text-xs font-medium tracking-widest uppercase text-neutral-500 mb-2 text-center">Selected Work</p>
+      <p class="text-sm font-light text-neutral-500 max-w-xs mx-auto text-center">
+        A few things I have built, am building, or maintain. Click the card to see what is underneath.
+      </p>
+    </div>
+
+    <div class="relative max-w-2xl mx-auto h-[360px] reveal" id="project-stack">
+      <div class="project-card pos-0" data-status="live">
+        <div class="flex items-start justify-between mb-5">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 17 10 11 4 5"/>
+              <line x1="12" x2="20" y1="19" y2="19"/>
+            </svg>
+          </div>
+          <span class="status-pill status-live"><span class="status-dot"></span>Live</span>
+        </div>
+        <h3 class="text-xl font-medium text-white mb-2">Unwrap</h3>
+        <p class="text-sm font-light text-neutral-400 leading-relaxed mb-8">
+          A terminal shaped blog built from scratch in Rust and compiled to WASM.
+        </p>
+        <div class="mt-auto flex items-center gap-4 border-t border-white/5 pt-5">
+          <a href="https://unwrapui.onrender.com" target="_blank" rel="noopener" class="warm-link text-xs font-medium text-indigo-400">Visit Site</a>
+          <a href="https://github.com/Topherchriss12" target="_blank" rel="noopener" class="warm-link text-xs font-medium text-neutral-500 hover:text-neutral-300">Source</a>
+        </div>
+      </div>
+
+      <div class="project-card pos-1" data-status="in-use">
+        <div class="flex items-start justify-between mb-5">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3C7 3 3 7 3 12s4 9 9 9 9-4 9-9-4-9-9-9Z"/>
+              <path d="M12 8v8"/>
+              <path d="M8 12h8"/>
+            </svg>
+          </div>
+          <span class="status-pill status-in-use"><span class="status-dot"></span>In Use</span>
+        </div>
+        <h3 class="text-xl font-medium text-white mb-2">shell-core</h3>
+        <p class="text-sm font-light text-neutral-400 leading-relaxed mb-8">
+          The underlying Rust crate powering Unwrap. A synchronous shell execution environment with a clear intentional boundary between core logic and async I/O work.
+        </p>
+        <div class="mt-auto flex items-center gap-4 border-t border-white/5 pt-5">
+          <!-- <a href="" target="_blank" rel="noopener" class="warm-link text-xs font-medium text-indigo-400">Crates.io</a> -->
+          <a href="https://github.com/Topherchriss12" target="_blank" rel="noopener" class="warm-link text-xs font-medium text-neutral-500 hover:text-neutral-300">Source</a>
+        </div>
+      </div>
+
+      <div class="project-card pos-2 project-card--modest" data-status="published">
+        <div class="flex items-start justify-between mb-4">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-9Z"/>
+              <path d="M8 9h8"/>
+              <path d="M8 12h8"/>
+              <path d="M8 15h5"/>
+            </svg>
+          </div>
+          <span class="status-pill status-published"><span class="status-dot"></span>Published</span>
+        </div>
+        <h3 class="text-xl font-medium text-white mb-2">WarmPool</h3>
+        <p class="text-sm font-light text-neutral-400 leading-relaxed mb-6">
+          Fast, isolated Postgres integration tests built on fingerprinted template databases. It creates a template once and reuses it by cloning for each test case.
+        </p>
+        <div class="mt-auto flex items-center gap-4 border-t border-white/5 pt-5">
+          <a href="https://crates.io/crates/warmpool" target="_blank" rel="noopener" class="warm-link text-xs font-medium text-indigo-400">Crates.io</a>
+          <a href="https://github.com/Topherchriss12" target="_blank" rel="noopener" class="warm-link text-xs font-medium text-neutral-500 hover:text-neutral-300">Source</a>
+        </div>
+      </div>
+
+      <div class="project-card pos-3" data-status="in-development">
+        <div class="flex items-start justify-between mb-5">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+              <line x1="4" x2="4" y1="22" y2="15"/>
+            </svg>
+          </div>
+          <span class="status-pill status-dev"><span class="status-dot"></span>In Development</span>
+        </div>
+        <h3 class="text-xl font-medium text-white mb-2">Multi Channel Pipeline</h3>
+        <p class="text-sm font-light text-neutral-400 leading-relaxed mb-8">
+          An enterprise multi tenant messaging platform handling SMS over SMPP and email delivery through a single unified campaign pipeline with strict multi tenant data isolation.
+        </p>
+        <div class="mt-auto flex items-center gap-4 border-t border-white/5 pt-5">
+          <span class="text-xs text-neutral-600 italic">Proprietary</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="about" class="py-24 px-6 border-y border-white/5">
     <div class="max-w-3xl mx-auto reveal">
       <p class="text-2xl md:text-3xl font-medium tracking-tight leading-snug text-white mb-10">
@@ -213,7 +307,7 @@
       <div class="mx-auto md:w-8/12 text-center">
         <h2 class="text-4xl md:text-6xl font-medium tracking-tight mb-6 leading-[1.1]">Want to work<br>together?</h2>
         <p class="text-base font-light text-neutral-400 leading-relaxed mb-12 max-w-md mx-auto text-center">
-          If you need someone to build the part of your system that can't afford to break or if you are working on a systems problem and would like some extra hand, I would genuinely like to hear about it. Reach me is by email, and I will respond as quickly as I can.</p>
+          If you need someone to build the part of your system that can't afford to break or if you are working on a systems problem and would like some extra hand, I would genuinely like to hear about it. Reach me by email, and I will respond as quickly as I can.</p>
         <a href="mailto:n42611750@gmail.com" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=n42611750@gmail.com','compose','width=900,height=700'); return false;" class="inline-flex items-center gap-2 bg-white text-black text-xs font-medium px-7 py-3.5 rounded-full hover:bg-neutral-200 transition-colors duration-300" aria-label="Email n42611750@gmail.com via Gmail">
           email Christopher.
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>

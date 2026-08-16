@@ -60,3 +60,42 @@ document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
+
+// Project Stack Rotation
+(function () {
+  const stack = document.getElementById('project-stack');
+  if (!stack) return;
+
+  const cards = Array.from(stack.querySelectorAll('.project-card'));
+  const maxVisibleCards = 4;
+  function updateStack() {
+    cards.forEach((card, index) => {
+      card.classList.remove('pos-0', 'pos-1', 'pos-2', 'pos-3');
+
+      if (index < maxVisibleCards) {
+        card.classList.add(`pos-${index}`);
+        card.style.opacity = '';
+        card.style.pointerEvents = '';
+        card.style.transform = '';
+        card.style.visibility = 'visible';
+        return;
+      }
+
+      card.style.opacity = '0';
+      card.style.pointerEvents = 'none';
+      card.style.transform = 'translateZ(-200px) scale(0.8)';
+      card.style.visibility = 'hidden';
+    });
+  }
+
+  updateStack();
+  stack.addEventListener('click', (event) => {
+    const topCard = event.target.closest('.pos-0');
+    if (!topCard || event.target.closest('a')) return;
+
+    const shifted = cards.shift();
+    cards.push(shifted);
+
+    updateStack();
+  });
+})();
